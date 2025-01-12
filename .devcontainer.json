@@ -1,0 +1,15 @@
+{
+  "name": "step-devcontainer",
+  "image" :  "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {},
+  "onCreateCommand": "sudo chsh -s /usr/bin/zsh $USER",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.linux": {
+      "zsh": {
+        "path": "/usr/bin/zsh"
+      }
+    }
+  },
+  "postCreateCommand": "./install-dependencies.sh"
+}
