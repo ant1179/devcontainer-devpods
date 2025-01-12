@@ -16,7 +16,7 @@ sudo apt update && \
   sudo apt install -y software-properties-common && \
   sudo add-apt-repository universe && \
   sudo apt update && \
-  sudo apt install -y apt-transport-https ca-certificates gnupg git tree curl wget bat gpg ripgrep stow cmake tmux fzf fd-find direnv
+  sudo apt install -y apt-transport-https ca-certificates gnupg git tree curl wget bat gpg ripgrep stow cmake tmux fd-find direnv
 
 # install lazygit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
@@ -86,3 +86,8 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:
 zsh -c 'git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting'
 zsh -c 'git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete'
 zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search'
+
+# install fzf manually (can't get completion to work for zsh when installing the binary)
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-fish
+echo "fzf has been installed in ~/.fzf; add it to your path"
