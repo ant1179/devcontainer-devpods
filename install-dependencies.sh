@@ -97,5 +97,5 @@ echo "fzf has been installed in ~/.fzf; add it to your path"
 ###
 
 $WORKSPACE_PATH=`/workspaces/$DEVPOD_WORKSPACE_ID/.git`
-rm -rf $WORKSPACE_PATH
-echo "Deleted git files in $WORKSPACE_PATH"
+rm -rf $PWD/.git
+echo "Deleted git files in $PWD"
