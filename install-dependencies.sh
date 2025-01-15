@@ -4,7 +4,7 @@
 # Delete git files
 ###
 
-$WORKSPACE_PATH=`/workspaces/$DEVPOD_WORKSPACE_ID`
+$WORKSPACE_PATH=`/workspaces/$DEVPOD_WORKSPACE_ID/.git`
 rm -rf $WORKSPACE_PATH
 echo "Deleted git files in $WORKSPACE_PATH"
 
