@@ -1,6 +1,14 @@
 #!/bin/sh
 
 ###
+# Delete git files
+###
+
+$WORKSPACE_PATH=`/workspaces/$DEVPOD_WORKSPACE_ID`
+rm -rf $WORKSPACE_PATH
+echo "Deleted git files in $WORKSPACE_PATH"
+
+###
 # Prepare installations
 ###
 
