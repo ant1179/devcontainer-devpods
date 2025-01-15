@@ -96,6 +96,5 @@ echo "fzf has been installed in ~/.fzf; add it to your path"
 # Delete git files
 ###
 
-$WORKSPACE_PATH=`/workspaces/$DEVPOD_WORKSPACE_ID/.git`
-rm -rf $PWD/.git
-echo "Deleted git files in $PWD"
+echo "Cleaning up workspace"
+rm -rfv $PWD/*
