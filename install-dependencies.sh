@@ -1,14 +1,6 @@
 #!/bin/sh
 
 ###
-# Delete git files
-###
-
-$WORKSPACE_PATH=`/workspaces/$DEVPOD_WORKSPACE_ID/.git`
-rm -rf $WORKSPACE_PATH
-echo "Deleted git files in $WORKSPACE_PATH"
-
-###
 # Prepare installations
 ###
 
@@ -99,3 +91,11 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZS
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-fish
 echo "fzf has been installed in ~/.fzf; add it to your path"
+
+###
+# Delete git files
+###
+
+$WORKSPACE_PATH=`/workspaces/$DEVPOD_WORKSPACE_ID/.git`
+rm -rf $WORKSPACE_PATH
+echo "Deleted git files in $WORKSPACE_PATH"
