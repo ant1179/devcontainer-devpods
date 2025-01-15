@@ -97,4 +97,8 @@ echo "fzf has been installed in ~/.fzf; add it to your path"
 ###
 
 echo "Cleaning up workspace"
-rm -rfv $PWD/*
+rm -rfv $PWD/.git
+rm -v $PWD/install-dependencies.sh
+rm -v $PWD/.devcontainer.json
+rm -v $PWD/.gitignore
+
