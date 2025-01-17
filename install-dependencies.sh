@@ -89,7 +89,7 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZS
 
 # install oh-my-zsh theme
 zsh -c 'git clone https://github.com/spaceship-prompt/spaceship-prompt.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt" --depth=1'
-ln -s '${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme' '${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship.zsh-theme'
+ln -s '${ZSH_CUSTOM}/themes/spaceship-prompt/spaceship.zsh-theme' '${ZSH_CUSTOM}/themes/spaceship.zsh-theme'
 
 # install fzf manually (can't get completion to work for zsh when installing the binary)
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
