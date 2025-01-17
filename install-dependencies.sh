@@ -88,10 +88,9 @@ zsh -c 'git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM
 zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search'
 
 # install oh-my-zsh theme
-chmod -R 777 $ZSH_CUSTOM/themes
-zsh -c 'git clone https://github.com/spaceship-prompt/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt --depth=1'
+mkdir -p $ZSH_CUSTOM/themes
+zsh -c 'git clone --depth 1 https://github.com/spaceship-prompt/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt'
 zsh -c 'ln -s $ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme $ZSH_CUSTOM/themes/spaceship.zsh-theme'
-chmod -R 755 $ZSH_CUSTOM/themes
 
 # install fzf manually (can't get completion to work for zsh when installing the binary)
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
