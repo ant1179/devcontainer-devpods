@@ -88,11 +88,10 @@ zsh -c 'git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM
 zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search'
 
 # install oh-my-zsh theme
-mkdir -p $ZSH_CUSTOM/themes
 echo "***********"
 echo "testing permissions"
 whoami
-ls -al $ZSH_CUSTOM/themes
+ls -al $ZSH_CUSTOM
 echo "***********"
 zsh -c 'git clone --depth 1 https://github.com/spaceship-prompt/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt'
 zsh -c 'ln -s $ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme $ZSH_CUSTOM/themes/spaceship.zsh-theme'
