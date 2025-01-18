@@ -95,14 +95,3 @@ zsh -c 'ln -s ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt/spacesh
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-fish
 echo "fzf has been installed in ~/.fzf; add it to your path"
-
-###
-# Delete git files
-###
-
-echo "Cleaning up workspace"
-rm -rfv $PWD/.git
-rm -v $PWD/install-dependencies.sh
-rm -v $PWD/.devcontainer.json
-rm -v $PWD/.gitignore
-
