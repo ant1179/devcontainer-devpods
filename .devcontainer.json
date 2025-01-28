@@ -1,7 +1,17 @@
 {
   "name": "step-devcontainer",
   "image" :  "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {},
+  "containerEnv": {
+    "LAZYGIT": "no",
+    "NEOVIM": "no",
+    "KUBECTL": "no",
+    "K9S": "no",
+    "FLUXCD": "no",
+    "POWERLINE_FONTS": "no",
+    "ZSH_PLUGINS": "no",
+    "FZF": "no",
+  },
+ "features": {},
   "onCreateCommand": "sudo chsh -s /usr/bin/zsh $USER",
   "settings": {
     "terminal.integrated.defaultProfile.linux": "zsh",
